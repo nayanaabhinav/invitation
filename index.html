@@ -72,7 +72,6 @@
             position: relative;
             padding: 60px 20px 20px 20px; /* Padding at top */
             background-color: var(--primary-navy); 
-            /* Replace with your direct working image link or local path e.g. './hero-bg.jpg' */
             background-image: url('https://lh3.googleusercontent.com/d/1rbDcpWM5BRSHVBsKWr4u3onH93Ygy2Gw'); 
             background-size: cover; 
             background-position: center top; 
@@ -400,6 +399,11 @@
             transition: transform 0.5s ease;
         }
 
+        /* Crops top portion to focus on bottom (the two people) */
+        .gallery-card img.focus-bottom {
+            object-position: center bottom;
+        }
+
         .gallery-card:hover img {
             transform: scale(1.03);
         }
@@ -603,7 +607,7 @@
                     <img src="https://lh3.googleusercontent.com/d/1GesnC1uCxFO1agGQPMFVCYew5aBzzVXK=s1200" alt="Nayana and Abhinav Photo 1" loading="lazy" />
                 </div>
                 <div class="gallery-card">
-                    <img src="https://lh3.googleusercontent.com/d/1sV7raQQtenL_7PGTzapi9kPNGNyuxSR4=s1200" alt="Nayana and Abhinav Photo 2" loading="lazy" />
+                    <img class="focus-bottom" src="https://lh3.googleusercontent.com/d/1sV7raQQtenL_7PGTzapi9kPNGNyuxSR4=s1200" alt="Nayana and Abhinav Photo 2" loading="lazy" />
                 </div>
                 <div class="gallery-card">
                     <img src="https://lh3.googleusercontent.com/d/1xdPeoOWhrQdIyy8gTnw74H-FYT2WYzOL=s1200" alt="Nayana and Abhinav Photo 3" loading="lazy" />
