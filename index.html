@@ -61,7 +61,7 @@
             line-height: 1.6;
         }
 
-        /* ===== HERO SECTION (TOP ALIGNED & BOTTOM CROPPED) ===== */
+        /* ===== HERO SECTION (TOP ALIGNED & RELIABLE BACKGROUND IMAGE) ===== */
         .hero-section {
             min-height: 100vh;
             width: 100%;
@@ -72,9 +72,10 @@
             position: relative;
             padding: 60px 20px 20px 20px; /* Padding at top */
             background-color: var(--primary-navy); 
+            /* Replace with your direct working image link or local path e.g. './hero-bg.jpg' */
             background-image: url('https://lh3.googleusercontent.com/d/1rbDcpWM5BRSHVBsKWr4u3onH93Ygy2Gw'); 
             background-size: cover; 
-            background-position: center top; /* Centers horizontally, focuses on top, crops bottom */
+            background-position: center top; 
             background-repeat: no-repeat;
         }
 
@@ -82,7 +83,7 @@
             content: '';
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.2) 100%); 
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 100%); 
             z-index: 0;
         }
 
