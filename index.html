@@ -93,7 +93,7 @@
             z-index: 1;
             padding: 20px 30px;
             background: transparent;
-            transform: none; /* Removed negative Y-transform */
+            transform: none;
             animation: fadeInUp 1.5s ease forwards;
         }
 
@@ -272,8 +272,10 @@
         .events-grid {
             display: flex;
             justify-content: center;
-            max-width: 600px;
+            gap: 30px;
+            max-width: 1100px;
             margin: 0 auto;
+            flex-wrap: wrap;
         }
 
         .event-card {
@@ -285,7 +287,10 @@
             border: 1px solid rgba(201, 160, 74, 0.08);
             position: relative;
             overflow: hidden;
-            width: 100%;
+            flex: 1 1 450px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .event-card::before {
@@ -346,12 +351,12 @@
 
         .event-details .address {
             color: var(--text-light);
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             position: relative;
             margin-top: 15px;
             padding-top: 15px;
             border-top: 1px dashed rgba(201, 160, 74, 0.2);
-            line-height: 1.7;
+            line-height: 1.6;
         }
 
         /* ===== GALLERY SECTION (VERTICAL FORMAT) ===== */
@@ -410,7 +415,7 @@
 
         .btn {
             display: inline-block;
-            padding: 15px 30px;
+            padding: 15px 20px;
             border-radius: 50px;
             font-size: 0.8rem;
             font-weight: 500;
@@ -421,7 +426,7 @@
             font-family: 'Inter', sans-serif;
             text-align: center;
             flex: 1;
-            min-width: 140px;
+            min-width: 130px;
             letter-spacing: 2px;
             text-transform: uppercase;
         }
@@ -503,7 +508,7 @@
             .countdown-container { gap: 15px; }
             .countdown-box { min-width: 80px; padding: 20px 25px; }
             .countdown-box span { font-size: 2.4rem; }
-            .event-card { padding: 35px 25px; }
+            .event-card { padding: 35px 25px; flex: 1 1 100%; }
             .event-actions { flex-direction: column; }
             .btn { flex: none; width: 100%; }
         }
@@ -555,16 +560,36 @@
             <h2 class="section-title">Wedding Events</h2>
             <div class="events-grid">
 
+                <!-- MUHURTHAM CARD -->
                 <div class="event-card">
-                    <h3>Muhurtham</h3>
-                    <div class="event-details">
-                        <p><strong>📅 Date:</strong> Sunday, 23rd August 2026</p>
-                        <p><strong>⏰ Time:</strong> Between 10:30 &amp; 11:30 AM</p>
-                        <p><strong>📍 Venue:</strong> <span class="venue-name">Meenakshi Mahal, Polpully</span></p>
+                    <div>
+                        <h3>Muhurtham</h3>
+                        <div class="event-details">
+                            <p><strong>📅 Date:</strong> Sunday, 23rd August 2026</p>
+                            <p><strong>⏰ Time:</strong> Between 10:30 &amp; 11:30 AM</p>
+                            <p><strong>📍 Venue:</strong> <span class="venue-name">Meenakshi Mahal, Polpully</span></p>
+                        </div>
                     </div>
                     <div class="event-actions">
                         <a href="https://maps.google.com/?q=Meenakshi+Mahal,+PPJG%2B97P,+Polpully,+Kerala+678552" target="_blank" rel="noopener noreferrer" class="btn btn-outline">🗺️ View Map</a>
                         <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Nayana+%26+Abhinav+Wedding+Muhurtham&dates=20260823T050000Z/20260823T060000Z&details=Wedding+Muhurtham+of+Nayana+and+Abhinav&location=Meenakshi+Mahal,+PPJG%2B97P,+Polpully,+Kerala+678552" target="_blank" rel="noopener noreferrer" class="btn btn-solid">📅 Add Reminder</a>
+                    </div>
+                </div>
+
+                <!-- RECEPTION CARD -->
+                <div class="event-card">
+                    <div>
+                        <h3>Reception</h3>
+                        <div class="event-details">
+                            <p><strong>📅 Date:</strong> Sunday, 23rd August 2026</p>
+                            <p><strong>⏰ Time:</strong> Between 05:00 PM to 08:00 PM</p>
+                            <p><strong>📍 Venue:</strong> <span class="venue-name">Mohamed Bagh Event Centre</span></p>
+                            <p class="address">Sulaiman Sahib Rd, opposite Elegant Public School, behind Mangalam Towers, Valakkad, Palakkad, Kerala 678014</p>
+                        </div>
+                    </div>
+                    <div class="event-actions">
+                        <a href="https://maps.google.com/?q=Mohamed+Bagh+Event+Centre,+Sulaiman+Sahib+Rd,+opposite+Elegant+Public+School,+behind+Mangalam+Towers,+Valakkad,+Palakkad,+Kerala+678014" target="_blank" rel="noopener noreferrer" class="btn btn-outline">🗺️ View Map</a>
+                        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Nayana+%26+Abhinav+Wedding+Reception&dates=20260823T113000Z/20260823T143000Z&details=Wedding+Reception+of+Nayana+and+Abhinav&location=Mohamed+Bagh+Event+Centre,+Sulaiman+Sahib+Rd,+Valakkad,+Palakkad,+Kerala+678014" target="_blank" rel="noopener noreferrer" class="btn btn-solid">📅 Add Reminder</a>
                     </div>
                 </div>
 
