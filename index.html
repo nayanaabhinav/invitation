@@ -61,20 +61,20 @@
             line-height: 1.6;
         }
 
-        /* ===== HERO SECTION (CENTER ALIGNED) ===== */
+        /* ===== HERO SECTION (TOP ALIGNED) ===== */
         .hero-section {
             min-height: 100vh;
             width: 100%;
             display: flex;
-            align-items: center; /* Centered vertically */
+            align-items: flex-start; /* Align content to the top */
             justify-content: center; /* Centered horizontally */
             text-align: center;
             position: relative;
-            padding: 40px 20px;
+            padding: 60px 20px 20px 20px; /* Padding at top */
             background-color: var(--primary-navy); 
             background-image: url('https://lh3.googleusercontent.com/d/1bTuOZ8mSTZXdBrdVz7DTd9wQA4d8cDGL'); 
             background-size: 140%; 
-            background-position: center center; 
+            background-position: center bottom; /* Shifted background image slightly down for clear text visibility */
             background-attachment: fixed;
             background-repeat: no-repeat;
         }
@@ -83,7 +83,7 @@
             content: '';
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.6) 100%); 
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.2) 100%); 
             z-index: 0;
         }
 
@@ -94,13 +94,13 @@
             padding: 20px 30px;
             background: transparent;
             transform: none;
-            animation: fadeInUp 1.5s ease forwards;
+            animation: fadeInDown 1.5s ease forwards;
         }
 
-        @keyframes fadeInUp {
+        @keyframes fadeInDown {
             from {
                 opacity: 0;
-                transform: translateY(20px); 
+                transform: translateY(-20px); 
             }
             to {
                 opacity: 1;
@@ -495,9 +495,9 @@
             .hero-section {
                 min-height: 100vh;
                 background-attachment: scroll;
-                padding: 40px 20px;
+                padding: 40px 20px 20px 20px;
                 background-size: 160%;
-                background-position: center center;
+                background-position: center bottom;
             }
 
             .hero-content {
@@ -523,7 +523,7 @@
 </head>
 <body>
     <div class="app">
-        <!-- ===== HERO SECTION (CENTER ALIGNED) ===== -->
+        <!-- ===== HERO SECTION (TOP ALIGNED) ===== -->
         <header class="hero-section">
             <div class="hero-content">
                 <h1 class="main-title">Nayana <span class="ampersand">&amp;</span> Abhinav</h1>
