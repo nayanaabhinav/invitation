@@ -399,6 +399,11 @@
             transition: transform 0.5s ease;
         }
 
+        /* Focus on bottom-centered portion */
+        .gallery-card img.focus-bottom-center {
+            object-position: center 90%; /* Adjusts the alignment downward for centering */
+        }
+
         /* Crops top portion to focus on bottom (the two people) */
         .gallery-card img.focus-bottom {
             object-position: center bottom;
@@ -604,7 +609,7 @@
             <h2 class="section-title">Memories</h2>
             <div class="gallery-container">
                 <div class="gallery-card">
-                    <img src="https://lh3.googleusercontent.com/d/1sV7raQQtenL_7PGTzapi9kPNGNyuxSR4=s1200" alt="Nayana and Abhinav Photo 3" loading="lazy" />
+                    <img class="focus-bottom-center" src="https://lh3.googleusercontent.com/d/1sV7raQQtenL_7PGTzapi9kPNGNyuxSR4=s1200" alt="Nayana and Abhinav Photo 3" loading="lazy" />
                 </div>
                 <div class="gallery-card">
                     <img src="https://lh3.googleusercontent.com/d/1xdPeoOWhrQdIyy8gTnw74H-FYT2WYzOL=s1200" alt="Nayana and Abhinav Photo 2" loading="lazy" />
